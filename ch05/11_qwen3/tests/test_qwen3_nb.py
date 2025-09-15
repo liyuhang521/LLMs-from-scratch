@@ -9,7 +9,7 @@ from pathlib import Path
 import pytest
 import torch
 
-from llms_from_scratch.utils import import_definitions_from_notebook
+from pkg.llms_from_scratch.utils import import_definitions_from_notebook
 
 
 transformers_installed = importlib.util.find_spec("transformers") is not None

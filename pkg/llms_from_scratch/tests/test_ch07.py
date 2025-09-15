@@ -3,9 +3,9 @@
 #   - https://www.manning.com/books/build-a-large-language-model-from-scratch
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
-from llms_from_scratch.ch04 import GPTModel
-from llms_from_scratch.ch05 import train_model_simple
-from llms_from_scratch.ch07 import (
+from pkg.llms_from_scratch.ch04 import GPTModel
+from pkg.llms_from_scratch.ch05 import train_model_simple
+from pkg.llms_from_scratch.ch07 import (
     download_and_load_file, InstructionDataset, format_input, custom_collate_fn
 )
 

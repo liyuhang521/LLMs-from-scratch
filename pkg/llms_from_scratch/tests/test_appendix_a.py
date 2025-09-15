@@ -3,7 +3,7 @@
 #   - https://www.manning.com/books/build-a-large-language-model-from-scratch
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
-from llms_from_scratch.appendix_a import NeuralNetwork, ToyDataset
+from pkg.llms_from_scratch.appendix_a import NeuralNetwork, ToyDataset
 
 import torch
 import torch.nn.functional as F

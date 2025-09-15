@@ -4,7 +4,7 @@
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
 
-from llms_from_scratch.ch03 import MultiHeadAttention, PyTorchMultiHeadAttention
+from pkg.llms_from_scratch.ch03 import MultiHeadAttention, PyTorchMultiHeadAttention
 import torch
 
 

@@ -3,8 +3,8 @@
 #   - https://www.manning.com/books/build-a-large-language-model-from-scratch
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
-from llms_from_scratch.ch04 import generate_text_simple
-from llms_from_scratch.llama3 import (
+from pkg.llms_from_scratch.ch04 import generate_text_simple
+from pkg.llms_from_scratch.llama3 import (
     apply_rope,
     compute_rope_params,
     GroupedQueryAttention,
@@ -13,8 +13,8 @@ from llms_from_scratch.llama3 import (
     LLAMA32_CONFIG_1B,
     Llama3Model,
 )
-from llms_from_scratch.kv_cache.llama3 import Llama3Model as Llama3ModelKV
-from llms_from_scratch.kv_cache.generate import generate_text_simple as generate_text_simple_cached
+from pkg.llms_from_scratch.kv_cache.llama3 import Llama3Model as Llama3ModelKV
+from pkg.llms_from_scratch.kv_cache.generate import generate_text_simple as generate_text_simple_cached
 
 import importlib
 import os

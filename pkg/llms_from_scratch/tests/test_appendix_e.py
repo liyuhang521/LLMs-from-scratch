@@ -4,12 +4,12 @@
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
 
-from llms_from_scratch.ch04 import GPTModel
-from llms_from_scratch.ch06 import (
+from pkg.llms_from_scratch.ch04 import GPTModel
+from pkg.llms_from_scratch.ch06 import (
     download_and_unzip_spam_data, create_balanced_dataset,
     random_split, SpamDataset, train_classifier_simple
 )
-from llms_from_scratch.appendix_e import replace_linear_with_lora
+from pkg.llms_from_scratch.appendix_e import replace_linear_with_lora
 
 from pathlib import Path
 import urllib

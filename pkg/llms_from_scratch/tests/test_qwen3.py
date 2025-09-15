@@ -3,8 +3,8 @@
 #   - https://www.manning.com/books/build-a-large-language-model-from-scratch
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
-from llms_from_scratch.ch04 import generate_text_simple
-from llms_from_scratch.qwen3 import (
+from pkg.llms_from_scratch.ch04 import generate_text_simple
+from pkg.llms_from_scratch.qwen3 import (
     apply_rope,
     compute_rope_params,
     load_weights_into_qwen,
@@ -13,12 +13,12 @@ from llms_from_scratch.qwen3 import (
     Qwen3Tokenizer,
     RMSNorm,
 )
-from llms_from_scratch.kv_cache.qwen3 import Qwen3Model as Qwen3ModelKV
-from llms_from_scratch.kv_cache.utils import KVCache
-from llms_from_scratch.kv_cache.generate import generate_text_simple as generate_text_simple_cached
+from pkg.llms_from_scratch.kv_cache.qwen3 import Qwen3Model as Qwen3ModelKV
+from pkg.llms_from_scratch.kv_cache.utils import KVCache
+from pkg.llms_from_scratch.kv_cache.generate import generate_text_simple as generate_text_simple_cached
 
-from llms_from_scratch.kv_cache_batched.qwen3 import Qwen3Model as Qwen3ModelKVBatched
-from llms_from_scratch.kv_cache_batched.generate import generate_text_simple as generate_text_simple_batched
+from pkg.llms_from_scratch.kv_cache_batched.qwen3 import Qwen3Model as Qwen3ModelKVBatched
+from pkg.llms_from_scratch.kv_cache_batched.generate import generate_text_simple as generate_text_simple_batched
 
 import importlib
 import platform

@@ -3,7 +3,7 @@
 #   - https://www.manning.com/books/build-a-large-language-model-from-scratch
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
-from llms_from_scratch.ch02 import create_dataloader_v1
+from pkg.llms_from_scratch.ch02 import create_dataloader_v1
 
 import os
 import urllib.request

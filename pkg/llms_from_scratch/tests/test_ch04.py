@@ -3,10 +3,10 @@
 #   - https://www.manning.com/books/build-a-large-language-model-from-scratch
 # Code: https://github.com/rasbt/LLMs-from-scratch
 
-from llms_from_scratch.ch04 import GPTModel, GPTModelFast
-from llms_from_scratch.kv_cache.gpt2 import GPTModel as GPTModelKV
-from llms_from_scratch.ch04 import generate_text_simple
-from llms_from_scratch.kv_cache.generate import generate_text_simple as generate_text_simple_cached
+from pkg.llms_from_scratch.ch04 import GPTModel, GPTModelFast
+from pkg.llms_from_scratch.kv_cache.gpt2 import GPTModel as GPTModelKV
+from pkg.llms_from_scratch.ch04 import generate_text_simple
+from pkg.llms_from_scratch.kv_cache.generate import generate_text_simple as generate_text_simple_cached
 
 import pytest
 import torch
