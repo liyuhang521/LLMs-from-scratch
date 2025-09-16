@@ -6,29 +6,34 @@
 import torch
 import torch.nn as nn
 
-
+# 使用矩阵叉乘实现的注意力机制
 class SelfAttention_v1(nn.Module):
 
     def __init__(self, d_in, d_out):
         super().__init__()
+        # 分别初始化权重矩阵qkv
         self.W_query = nn.Parameter(torch.rand(d_in, d_out))
         self.W_key = nn.Parameter(torch.rand(d_in, d_out))
         self.W_value = nn.Parameter(torch.rand(d_in, d_out))
 
     def forward(self, x):
+        # 根据x计算出qkv
         keys = x @ self.W_key
         queries = x @ self.W_query
         values = x @ self.W_value
 
+        # 使用q和k计算出注意力分数
         attn_scores = queries @ keys.T # omega
+        # 使用注意力分数和key处理注意力分数归一化并进行缩放数据
         attn_weights = torch.softmax(
             attn_scores / keys.shape[-1]**0.5, dim=-1
         )
 
+        # 使用缩放和归一化后的注意力权重叉乘值权重参数向量得到上下文向量返回
         context_vec = attn_weights @ values
         return context_vec
 
-
+# 使用Linear实现的注意力机制 参考v1版本实现代码
 class SelfAttention_v2(nn.Module):
 
     def __init__(self, d_in, d_out, qkv_bias=False):
@@ -48,7 +53,7 @@ class SelfAttention_v2(nn.Module):
         context_vec = attn_weights @ values
         return context_vec
 
-
+# 因果注意力机制
 class CausalAttention(nn.Module):
 
     def __init__(self, d_in, d_out, context_length,
@@ -82,7 +87,7 @@ class CausalAttention(nn.Module):
         context_vec = attn_weights @ values
         return context_vec
 
-
+# 多头注意力机制
 class MultiHeadAttentionWrapper(nn.Module):
     def __init__(self, d_in, d_out, context_length, dropout, num_heads, qkv_bias=False):
         super().__init__()

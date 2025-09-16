@@ -61,4 +61,5 @@ def test_dataloader(tmp_path, file_name):
         # 也就是4行256列的矩阵,就是同维度向量加法就将位置信息添加到token嵌入向量中了
         input_embeddings = token_embeddings + pos_embeddings
         break
+
     input_embeddings.shape == torch.Size([8, 4, 256])
